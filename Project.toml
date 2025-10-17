@@ -1,0 +1,9 @@
+[deps]
+BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+GenieFramework = "a59fdf5c-6bf0-4f5d-949c-a137c9e2f353"
+JLD2 = "033835bb-8acc-5ee8-8aae-3f567f8a3819"
+JuMP = "4076af6c-e467-56ae-b986-b466b2749572"
+MPSGE = "d5dc2f44-7ae2-49e9-bc77-b47b6bca565d"
+PlotlyBase = "a03496cd-edff-5a9b-9e67-9cda94a718b5"
+WiNDCNational = "859d2a84-d038-44d0-959f-b84298eeb557"
