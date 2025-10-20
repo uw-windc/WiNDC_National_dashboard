@@ -3,7 +3,8 @@ module ResultsTab
     using WiNDCNational
     const WN = WiNDCNational
 
-    using DataFrames
+    import DataFrames
+    import DataFrames: transform, sort, combine, ByRow
 
     using GenieFramework
     using PlotlyBase
