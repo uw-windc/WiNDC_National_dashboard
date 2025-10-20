@@ -1,4 +1,4 @@
-FROM julia:latest
+FROM julia:1.11.6
 RUN useradd --create-home --shell /bin/bash genie
 RUN mkdir /home/genie/app
 COPY . /home/genie/app
@@ -8,11 +8,11 @@ USER genie
 RUN julia -e "using Pkg; Pkg.activate(\".\"); Pkg.instantiate();"
 EXPOSE 8000
 EXPOSE 80
-ENV JULIA_DEPOT_PATH "/home/genie/.julia"
-ENV JULIA_REVISE = "off"
-ENV GENIE_ENV "dev"
-ENV GENIE_HOST "0.0.0.0"
-ENV PORT "8000"
-ENV WSPORT "8000"
-ENV EARLYBIND "true"
+ENV JULIA_DEPOT_PATH = /home/genie/.julia
+ENV JULIA_REVISE = off
+ENV GENIE_ENV = dev
+ENV GENIE_HOST = 0.0.0.0
+ENV PORT = 8000
+ENV WSPORT = 8000
+ENV EARLYBIND = true
 ENTRYPOINT ["julia", "--project", "-e", "using GenieFramework; Genie.loadapp(); up(async=false);"]
